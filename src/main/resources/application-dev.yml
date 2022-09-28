@@ -1,0 +1,31 @@
+server: 
+  port: 8888
+
+web:
+  resource-path: D:/dreamer-cms/
+
+spring: 
+  datasource: 
+    name: dev
+    url: jdbc:mysql://localhost:3306/dreamer-cms?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 2000
+    database: 0
+    password: 123456
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 50
+        max-wait: -1
+
+# 日志配置
+logging:
+  level:
+    root: info
+  file:
+    path: C:/Users/zhangyang/CMS系统/dreamer-cms/logs/
